@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
+        rel="stylesheet" />
+    <!-- Font Awesome (untuk ikon hamburger) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar-section">
+        <a href="index.html" class="navbar-logo-brand">Cafe<span>IN</span></a>
+
+        <div class="navbar-links">
+            <a href="index.html">Beranda</a>
+            <a href="index.html#section-about">Tentang Kami</a>
+            <a href="menu.html">Menu</a>
+            <a href="index.html#section-contact">Kontak</a>
+        </div>
+
+        <div class="navbar-icons">
+            <a href="#" id="icon-search"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" id="icon-cart"><i class="fa-solid fa-shopping-cart"></i></a>
+            <a href="#" id="icon-menu"><i class="fa-solid fa-bars"></i></a>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    
+    <!-- Menu Section Start -->
+    <section class="menu-section" id="section-menu">
+        <h2 class="menu-title">Menu <span>Kopi</span></h2>
+        <p class="menu-subtitle">Nikmati pilihan kopi terbaik kami</p>
+    
+        <div class="menu-items-container">
+            <div class="menu-item-card">
+                <img src="images/espresso.webp" alt="Espresso" />
+                <h3>Espresso</h3>
+                <p>Kopi hitam pekat dengan rasa kuat dan khas.</p>
+                <span class="item-price">Rp 18.000</span>
+                <a href="#" class="btn-order" data-name="espresso" data-price="18000">Pesan Sekarang</a>
+            </div>
+    
+            <div class="menu-item-card">
+                <img src="images/latte.webp" alt="Latte" />
+                <h3>Latte</h3>
+                <p>Perpaduan espresso dan susu yang creamy dan lembut.</p>
+                <span class="item-price">Rp 22.000</span>
+                <a href="#" class="btn-order" data-name="Latte" data-price="22000">Pesan Sekarang</a>
+            </div>
+    
+            <div class="menu-item-card">
+                <img src="images/cappuccino.webp" alt="Cappuccino" />
+                <h3>Cappuccino</h3>
+                <p>Espresso dengan buih susu yang halus dan nikmat.</p>
+                <span class="item-price">Rp 24.000</span>
+                <a href="#" class="btn-order" data-name="Cappuccino" data-price="24000">Pesan Sekarang</a>
+            </div>
+
+            <div class="menu-item-card">
+                <img src="images/coffe1.jpg" alt="Americano" />
+                <h3>Americano</h3>
+                <p>Espresso dengan buih susu yang halus dan nikmat.</p>
+                <span class="item-price">Rp 24.000</span>
+                <a href="#" class="btn-order" data-name="Cappuccino" data-price="24000">Pesan Sekarang</a>
+            </div>
+
+            <div class="menu-item-card">
+                <img src="images/coffe3.jpg" alt="flat white" />
+                <h3>Flat White</h3>
+                <p>Espresso dengan buih susu yang halus dan nikmat.</p>
+                <span class="item-price">Rp 24.000</span>
+                <a href="#" class="btn-order" data-name="Cappuccino" data-price="24000">Pesan Sekarang</a>
+            </div>
+
+            <div class="menu-item-card">
+                <img src="images/coffe2.jpg" alt="Cinnamon" />
+                <h3>Cinnamon</h3>
+                <p>Espresso dengan buih susu yang halus dan nikmat.</p>
+                <span class="item-price">Rp 24.000</span>
+                <a href="#" class="btn-order" data-name="Cappuccino" data-price="24000">Pesan Sekarang</a>
+            </div>
+
+            <div class="menu-item-card">
+                <img src="images/cappuccino.webp" alt="Cappuccino" />
+                <h3>Mocha</h3>
+                <p>Espresso dengan buih susu yang halus dan nikmat.</p>
+                <span class="item-price">Rp 24.000</span>
+                <a href="#" class="btn-order" data-name="Cappuccino" data-price="24000">Pesan Sekarang</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- Menu Section End -->
+
+    <!-- Sidebar Keranjang -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <button id="close-cart">Tutup</button>
+        <div id="cart-items">
+            <p>Keranjang kosong</p>
+        </div>
+        <button id="checkout-cart">Pesan Sekarang</button>
+    </div>
+
+    <div id="toast" class="toast">Pesanan berhasil diproses!</div>
+    
+    <script>
+        feather.replace();
+    </script>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
