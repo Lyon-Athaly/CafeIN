@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #b6895b;
+  --color-bg: #010101;
+}
+
+@layer base {
+  .font-serif {
+    font-family: "playfair display", serif;
+  }
+}
