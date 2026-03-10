@@ -2,8 +2,8 @@ import { Search, ShoppingCart } from "lucide-react";
 
 const navLinks = [
   { href: "#", label: "Home" },
-  { href: "#menu", label: "Menu" },
   { href: "#about", label: "About" },
+  { href: "#menu", label: "Menu" },
   { href: "#contact", label: "Contact" },
 ];
 
