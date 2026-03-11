@@ -1,9 +1,9 @@
 import { FacebookIcon, InstagramIcon, TwitterIcon} from "lucide-react";
 
 const sosmed = [
-  { href: "", label: "Facebook", logo: FacebookIcon},
-  { href: "", label: "Instagram", logo: InstagramIcon},
-  { href: "", label: "Twitter", logo: TwitterIcon},
+  { href: "https://facebook.com/", label: "Facebook", logo: FacebookIcon },
+  { href: "https://instagram.com/", label: "Instagram", logo: InstagramIcon },
+  { href: "", label: "Twitter", logo: TwitterIcon },
 ];
 
 const About = () => {
