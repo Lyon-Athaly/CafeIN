@@ -3,7 +3,7 @@
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-dark rounded-base shadow-xs border border-default w-full">
+    <footer className="bg-primary-dark rounded-base shadow-xs border-2 border-default border-black w-full">
       <div className="text-white/60 w-full mx-auto px-16 py-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <a href="#"className="text-primary font-black italic text-3xl tracking-wide">

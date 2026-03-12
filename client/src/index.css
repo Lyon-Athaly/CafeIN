@@ -7,6 +7,7 @@
   --color-price: #ffb703;
   --color-highlight: #f5a623;
   --color-background: #ddd4b0;
+  --color-form: #fff5c0
 }
 
 @layer base {
