@@ -1,0 +1,17 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model menu {
+  id          String  @id()  @default(cuid())
+  name        String
+  price       Int
+  description String
+  image       String
+}
