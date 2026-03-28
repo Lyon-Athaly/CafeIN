@@ -7,7 +7,7 @@ const menuRouter = express.Router()
 menuRouter.get("/", getMenu)
 menuRouter.get("/:idMenu", getMenu)
 menuRouter.post("/", addMenu)
-menuRouter.patch("/:idMenu", updateMenu)
+menuRouter.put("/:idMenu", updateMenu)
 menuRouter.delete("/:idMenu", deleteMenu);
 
 
