@@ -5,6 +5,7 @@ import { addMenu, deleteMenu, getMenu, updateMenu } from "../controller/menuCont
 const menuRouter = express.Router()
 
 menuRouter.get("/", getMenu)
+menuRouter.get("/:idMenu", getMenu)
 menuRouter.post("/", addMenu)
 menuRouter.patch("/:idMenu", updateMenu)
 menuRouter.delete("/:idMenu", deleteMenu);

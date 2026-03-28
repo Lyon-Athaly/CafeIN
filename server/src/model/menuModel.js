@@ -8,8 +8,31 @@ export const getAllMenu = async () => {
 
 export const getOneMenu = async (idMenu) => {
     const menu = await prisma.menu.findUnique({
-        where: {idMenu}
+        where: {id: idMenu}
     })
 
     return menu
+}
+
+export const createMenu = async (data) => {
+    const menu = await prisma.menu.create({
+        data: {
+            name: data.name,
+            description: data.description,
+            price: data.price,
+            image: data.image
+        },
+    })
+    return menu
+}
+
+export const editMenu = async (idMenu) => {
+    const target = await getOneMenu(idMenu);
+
+}
+
+export const removeMenu = async (idMenu) => {
+    const target = await getOneMenu(idMenu)
+
+    const menu = await prisma.menu.delete(target)
 }
