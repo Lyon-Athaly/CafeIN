@@ -9,7 +9,7 @@ import List from "@/components/List";
 function Menu() {
   return (
     <div>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Navbar />
       <main>
         <List />
