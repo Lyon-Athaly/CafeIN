@@ -6,9 +6,8 @@ const app = express();
 
 app.use(express.json());
 
+app.use("/uploads", express.static("src/uploads"));
 app.use("/menu", menuRouter);
 
 const port = process.env.PORT;
-app.listen(port, () => {
-  console.log(`${port}`);
-});
+app.listen(port, () => {console.log(`${port}`);});

@@ -31,15 +31,21 @@ export const getMenu = async (req, res) => {
 export const addMenu = async (req, res) => {
 
   try {
-    const data  = req.body;
-    const menu = await createMenu(data);
+    const { name, description, price } = req.body;
+    const image = req.file ? req.file.filename : null;
 
-    res.status(201).json({
-      message: "CREATE new menu success",
-      data: menu
-    });
+    const menuData = {
+      name,
+      description,
+      price: parseInt(price),
+      image,
+    };
+
+    const menu = await createMenu(menuData);
+
+    res.status(201).json({ message: "Add success", data: menu });
   } catch (error) {
-    console.error(error);
+    console.error(error)
     res.status(500).json({
       message: "Server Error",
       serverMessage: error.message,
@@ -51,8 +57,20 @@ export const addMenu = async (req, res) => {
 export const updateMenu = async (req, res) => {
   try {
     const { idMenu } = req.params
-    const data = req.body
-    const newData = await editMenu(idMenu, data)
+    const { name, description, price } = req.body;
+    let image;
+    if (req.file) {
+      image = req.file.filename;
+    }
+
+    const updateData = {
+      name,
+      description,
+      price: price ? parseInt(price) : undefined,
+      ...(image && { image }), // Hanya masukkan field image jika ada file baru
+    };
+
+    const newData = await editMenu(idMenu, updateData);
 
     res.status(200).json({
       message: "Edit success",
@@ -71,6 +89,7 @@ export const deleteMenu = async (req, res) => {
   try {
     const { idMenu } = req.params;
     const target = await removeMenu(idMenu)
+
     res.json("delete sukses");
   } catch (error) {
     console.error(error);
@@ -79,5 +98,4 @@ export const deleteMenu = async (req, res) => {
       serverMessage: error.message,
     });
   }
-  
 };

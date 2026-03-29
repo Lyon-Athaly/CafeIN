@@ -13,5 +13,5 @@ model menu {
   name        String
   price       Int
   description String
-  image       String
+  image       String?
 }

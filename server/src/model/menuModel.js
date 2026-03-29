@@ -13,27 +13,16 @@ export const getOneMenu = async (idMenu) => {
     return menu
 }
 
-export const createMenu = async (data) => {
-    const menu = await prisma.menu.create({
-        data: {
-            name: data.name,
-            description: data.description,
-            price: data.price,
-            image: data.image
-        },
-    })
+export const createMenu = async (input) => {
+    const menu = await prisma.menu.create({data: input})
+
     return menu
 }
 
-export const editMenu = async (idMenu, data) => {
+export const editMenu = async (idMenu, input) => {
     const menu = await prisma.menu.update({
         where: {id: idMenu},
-        data: {
-            name: data.name,
-            description: data.description,
-            price: data.price,
-            image: data.image,
-        },
+        data: input
     });
     return menu;
 }
