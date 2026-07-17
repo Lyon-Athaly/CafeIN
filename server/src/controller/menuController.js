@@ -1,5 +1,4 @@
 import { createMenu, editMenu, getAllMenu, getOneMenu, removeMenu } from "../model/menuModel.js";
-import prisma from "../config/prisma.js";
 
 export const getMenu = async (req, res) => {
   try {
@@ -31,8 +30,8 @@ export const getMenu = async (req, res) => {
 export const addMenu = async (req, res) => {
 
   try {
-    const { name, description, price } = req.body;
-    const image = req.file ? req.file.filename : null;
+    const { name, description, price, image } = req.body;
+    // const image = req.file ? req.file.filename : null;
 
     const menuData = {
       name,
