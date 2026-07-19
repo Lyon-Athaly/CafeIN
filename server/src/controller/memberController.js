@@ -28,18 +28,24 @@ export const getMember = async (req, res) => {
 export const addMember = async (req, res) => {
 
   try {
-    const { name, role, image } = req.body;
+    const { name, role, image, socials } = req.body;
     // const image = req.file ? req.file.filename : null;
+
+    const parsedSocials = typeof socials === 'string' ? JSON.parse(socials) : socials;
 
     const memberData = {
       name,
       role,
       image,
+      socials: {create: parsedSocials}
     };
 
     const member = await createMember(memberData);
 
-    res.status(201).json({ message: "Add success", data: member });
+    res.status(201).json({
+        message: "Add success",
+        data: member,
+      });
     } catch (error) {
         console.error(error)
         res.status(500).json({
